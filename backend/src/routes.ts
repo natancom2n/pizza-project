@@ -1,12 +1,11 @@
-import { Request, Router, Response } from 'express';
+import { Router } from 'express';
+import { CreateUserController } from './controllers/user/CreateUserController';
 
 const router = Router();
 
-router.get('/test', (req: Request, res: Response) => {
-    return res.json({ name: 'Pizza-Man!!' })
 
-    //exection Error
-    // throw new Error('Error on make this request!!');
-});
+//-- USER ROTES --
+//for create (cadastrar) an user use post
+router.post('/users', new CreateUserController().handle)
 
 export { router };
