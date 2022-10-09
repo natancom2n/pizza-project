@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import multer from 'multer';
 
 //import User
 import { CreateUserController } from './controllers/user/CreateUserController';
@@ -13,7 +14,13 @@ import { ListCategoryController } from './controllers/category/ListCategoryContr
 //import products
 import { CreateProductController } from './controllers/product/CreateProductController';
 
+//images uploads
+import uploadConfig from './config/multer';
+
 const router = Router();
+
+//what directory will be save
+const upload = multer(uploadConfig.upload("./tmp"))
 
 
 //-- USER ROTES --
@@ -28,7 +35,7 @@ router.post('/category', isAuthenticated, new CreateCategoryController().handle)
 router.get('/category', isAuthenticated, new ListCategoryController().handle)
 
 //  ---- Rotes Produtcs ----
-router.post('/product', isAuthenticated, new CreateProductController().handle)
+router.post('/product', isAuthenticated, upload.single('file'), new CreateProductController().handle)
 
 
 

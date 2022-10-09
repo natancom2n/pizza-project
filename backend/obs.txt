@@ -1,0 +1,8 @@
+
+
+#work whit images in node:
+$yarn add multer
+
+#types access of multer in typescript
+$yarn add @types/multer -D 
+
