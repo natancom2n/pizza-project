@@ -13,7 +13,7 @@ class CreateCategoryController {
 
         })
         return res.json(category);
-        //teste
+
     }
 }
 
