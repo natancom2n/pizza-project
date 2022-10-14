@@ -13,6 +13,11 @@ $yarn tsc --init
 
 #create file server.ts to open server node express
 
+#create the script for run typescript project, add librari ts-node-dev
+$yarn add ts-node-dev -D
+
+#after create the script in package.ts
+
 #work whit images in node:
 $yarn add multer
 
