@@ -13,6 +13,7 @@ import { ListCategoryController } from './controllers/category/ListCategoryContr
 
 //import products
 import { CreateProductController } from './controllers/product/CreateProductController';
+import { ListByCategoryController } from './controllers/product/ListByCategoryController';
 
 //images uploads
 import uploadConfig from './config/multer';
@@ -36,7 +37,7 @@ router.get('/category', isAuthenticated, new ListCategoryController().handle)
 
 //  ---- Rotes Produtcs ----
 router.post('/product', isAuthenticated, upload.single('file'), new CreateProductController().handle)
-
+router.get('/category/product', isAuthenticated, new ListByCategoryController().handle)
 
 
 
