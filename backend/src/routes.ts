@@ -17,6 +17,7 @@ import { ListByCategoryController } from './controllers/product/ListByCategoryCo
 
 //import orders
 import { CreateOrderController } from './controllers/order/CreateOrderController';
+import { RemoveOrderController } from './controllers/order/RemoveOrderController';
 
 //images uploads
 import uploadConfig from './config/multer';
@@ -45,6 +46,7 @@ router.get('/category/product', isAuthenticated, new ListByCategoryController().
 
 // ---- Orders -------
 router.post('/order', isAuthenticated, new CreateOrderController().handle)
+router.delete('/order', isAuthenticated, new RemoveOrderController().handle)
 
 
 

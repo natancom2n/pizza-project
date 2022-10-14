@@ -1,4 +1,17 @@
 
+#install typescritp in developer invoiment
+$yarn add typescript -D 
+
+#install express
+$yarn add express
+
+#install types of express ( autocomplete code line)
+$yarn add @types/express -D
+
+#initial typescript 
+$yarn tsc --init
+
+#create file server.ts to open server node express
 
 #work whit images in node:
 $yarn add multer
