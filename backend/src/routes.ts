@@ -24,6 +24,7 @@ import { SendOrderController } from './controllers/order/SendOrderController';
 
 import { ListOrderController } from './controllers/order/ListOrderController';
 import { DetailOrderController } from './controllers/order/DetailOrderController';
+import { FinishOrderController } from './controllers/order/FinishOrderController';
 
 //images uploads
 import uploadConfig from './config/multer';
@@ -62,6 +63,7 @@ router.put('/order/send', isAuthenticated, new SendOrderController().handle)
 router.get('/orders', isAuthenticated, new ListOrderController().handle)
 router.get('/order/detail', isAuthenticated, new DetailOrderController().handle)
 
+router.put('/order/finish', isAuthenticated, new FinishOrderController().handle)
 
 
 
