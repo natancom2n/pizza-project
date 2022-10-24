@@ -15,4 +15,11 @@
                     <h1>Hello World</h1>
                 </div>
             )
-        } 
+        }
+6) Stop the project and install typescript: $yarn add typescript @types/react @types/node -D
+    (this command add few types from react and node, -D define Developer Envoirement)
+
+7) Change the index.js from index.tsx, and change _app.js from _app.tsx
+8) Rodar o comando $yarn dev para rodar o projeto e instalar o typescript
+9) dentro de _app.tsx add: import { AppProps } from 'next/app';
+
