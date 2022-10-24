@@ -22,4 +22,16 @@
 7) Change the index.js from index.tsx, and change _app.js from _app.tsx
 8) Rodar o comando $yarn dev para rodar o projeto e instalar o typescript
 9) dentro de _app.tsx add: import { AppProps } from 'next/app';
-
+10)  SASS: Install sas: stop the project and $yarn add sass
+11) Install CSS modules and SASS module on VS CODE
+12) Go to Home.module.css and delete all lines, add any modifications css just for test, exemple:
+        .container {
+            color: red;
+        }
+13) Inside index.tsx add: import styles from '../../styles/Home.module.css';
+    and modify the div from:  <div className={styles.container}>
+14) Change the extention file the Home.module.css from Home.module.scss, the same with globals.scss
+    OBS.: Don't forget change at import css from .scss on index.tsx
+15) Change Styles on globals.scss how you wich
+16) Add import the globals.scss in _app.tsx:  import '../../styles/globals.scss';
+17) 
