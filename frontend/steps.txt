@@ -34,4 +34,4 @@
     OBS.: Don't forget change at import css from .scss on index.tsx
 15) Change Styles on globals.scss how you wich
 16) Add import the globals.scss in _app.tsx:  import '../../styles/globals.scss';
-17) 
+17) Create /pages/_document.tsx
