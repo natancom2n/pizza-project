@@ -1,0 +1,18 @@
+1) Excluir logo da versel dentro /public
+2) Create pasta SRC, arrastar a pasta pages para dentro de SRC 
+3) Delete /SCR/pages/API deletar pasta API
+4) Acesse /scr/pages/_app.js  e deletar import '../styles/globals.css'
+5) Limpar index /scr/pages/index.js retirar:
+    a) Excluir os imports 
+        import styles from '../styles/Home.module.css'
+        import Head from 'next/head'
+        import Image from 'next/image'
+    
+    b) Excluir todo o conteúdo deixar somente:
+        export default function Home() {
+        return (
+                <div>
+                    <h1>Hello World</h1>
+                </div>
+            )
+        } 
