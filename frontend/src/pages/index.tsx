@@ -4,8 +4,10 @@ import Head from 'next/head';
 
 import logoImg from '../../public/logo.svg';
 
-import { Input } from '../components/ui/Input'
-import { Button } from '../components/ui/Button'
+import { Input } from '../components/ui/Input';
+import { Button } from '../components/ui/Button';
+
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -32,7 +34,9 @@ export default function Home() {
             >Acessar
             </Button>
           </form>
-          <a className={styles.text}>Don't have account? Create a new accont.</a>
+          <Link href="/signup">
+            <a className={styles.text}>Don't have account? Create a new accont.</a>
+          </Link>
         </div>
       </div>
     </>
