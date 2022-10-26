@@ -1,0 +1,13 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Layer 1</title>
+  <ellipse fill="#ff7f00" cx="200.49999" cy="107.30597" id="svg_1" rx="198.49999" ry="79.69402" stroke="#ff7f00"/>
+  <text fill="#000000" x="120.10773" y="212.94252" id="svg_3" stroke-width="0" font-size="24" font-family="'El Messiri'" text-anchor="start" xml:space="preserve" font-weight="bold" transform="matrix(2.57504 0 0 4.39853 -243.627 -844.138)" stroke="#ff7f00">Pizza Fast!!</text>
+  <ellipse fill="#ff0202" stroke-width="0" cx="77.34615" cy="128.29053" id="svg_8" rx="29.15035" ry="20.61052" stroke="#ff7f00"/>
+  <ellipse fill="#ff0202" stroke-width="0" cx="163.40909" cy="146.15299" id="svg_9" rx="29.15035" ry="20.61052" stroke="#ff7f00"/>
+  <ellipse fill="#ff0202" stroke-width="0" cx="244.91957" cy="146.15299" id="svg_10" rx="29.15035" ry="20.61052" stroke="#ff7f00"/>
+  <ellipse fill="#ff0202" stroke-width="0" cx="322.65383" cy="126.54246" id="svg_11" rx="29.15035" ry="20.61052" stroke="#ff7f00"/>
+  <text fill="#ffffff" x="119.56859" y="212.03312" id="svg_13" stroke-width="0" font-size="24" font-family="'El Messiri'" text-anchor="start" xml:space="preserve" font-weight="bold" transform="matrix(2.57504 0 0 4.39853 -243.627 -844.138)" stroke="#898888">Pizza Fast!!</text>
+ </g>
+
+</svg>
