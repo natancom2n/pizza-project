@@ -35,3 +35,5 @@
 15) Change Styles on globals.scss how you wich
 16) Add import the globals.scss in _app.tsx:  import '../../styles/globals.scss';
 17) Create /pages/_document.tsx
+18) Install librari of icon, stop de program CTRL + C, after types:
+    $yarn add react-icons
