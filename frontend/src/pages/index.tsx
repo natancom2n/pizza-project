@@ -29,11 +29,10 @@ export default function Home() {
             <Button
               type="submit"
               loading={false}
-            >Cadastrar
-
+            >Acessar
             </Button>
-
           </form>
+          <a className={styles.text}>Don't have account? Create a new accont.</a>
         </div>
       </div>
     </>
