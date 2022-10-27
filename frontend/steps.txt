@@ -37,3 +37,7 @@
 17) Create /pages/_document.tsx
 18) Install librari of icon, stop de program CTRL + C, after types:
     $yarn add react-icons
+
+19) Install the API axios for request http, nookies for cookies client side and jwt-decode for coding jwt
+    Stop the project and type:
+    $yarn add axios nookies jwt-decode
