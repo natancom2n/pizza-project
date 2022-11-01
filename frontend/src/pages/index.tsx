@@ -21,11 +21,20 @@ export default function Home() {
 
   const [loading, setLoading] = useState(false);
 
+  //see if exist any data in the inputs
 
 
   //login
   async function handleLogin(event: FormEvent) {
     event.preventDefault();
+    if (email === '' || password === '') {
+      alert("Preencha os dados");
+      return;
+    }
+
+    setLoading(true)
+
+
     let data = {
       // email: "teste@teste.com", //just test
       // password: "123123"//only test
@@ -34,6 +43,8 @@ export default function Home() {
 
     }
     await signIn(data)
+
+    setLoading(false)
   }
 
   return (
@@ -60,7 +71,7 @@ export default function Home() {
             />
             <Button
               type="submit"
-              loading={false}
+              loading={loading}
             >Acessar
             </Button>
           </form>

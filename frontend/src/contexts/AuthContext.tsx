@@ -8,6 +8,7 @@ type AuthContextData = {
     isAuthenticated: boolean;
     signIn: (credentials: SignInProps) => Promise<void>;
     signOut: () => void;
+    signUp: (credentials: SignUpProps) => Promise<void>;
 }
 
 type UserProps = {
@@ -20,6 +21,13 @@ type SignInProps = {
     email: string;
     password: string;
 }
+
+type SignUpProps = {
+    name: string;
+    email: string;
+    password: string;
+}
+
 type AuthProviderProps = {
     children: ReactNode;
 }
@@ -41,7 +49,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     const [user, setUser] = useState<UserProps>()
     const isAuthenticated = !!user; //when the user is login is true, when not is false ( !! change de variable for boolen)
 
-    //recived the e-mail and password of inputs 
+    //recived the e-mail and password of inputs ###################################
     async function signIn({ email, password }: SignInProps) {
         // alert('Clicou no Login')
         // console.log("Login: ", email)
@@ -76,12 +84,33 @@ export function AuthProvider({ children }: AuthProviderProps) {
         } catch (err) {
             console.log('Error of access ', err)
         }
+    }// end signUp  #######################################
 
+    async function signUp({ name, email, password }: SignUpProps) {
+        // console.log(name) // just test
+        try {
+
+            //look in the Imsonia
+            const response = await api.post('/users', {
+                name,
+                email,
+                password
+            })
+
+            console.log("Cadastro com Sucesso")
+
+            //after the account create, send the login page
+            Router.push('/');
+
+
+        } catch (err) {
+            console.log("Erro: ", err)
+        }
 
     }
 
     return (
-        <AuthContext.Provider value={{ user, isAuthenticated, signIn, signOut }}>
+        <AuthContext.Provider value={{ user, isAuthenticated, signIn, signOut, signUp }}>
             {children}
         </AuthContext.Provider>
     )
