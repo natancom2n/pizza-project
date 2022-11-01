@@ -40,4 +40,9 @@
 
 19) Install the API axios for request http, nookies for cookies client side and jwt-decode for coding jwt
     Stop the project and type:
-    $yarn add axios nookies jwt-decode
+    $yarn add axios nookies jwt-decode  
+
+20) Stop the project and install the librari react-toastify = https://fkhadra.github.io/react-toastify/introduction
+    $yarn add react-toastify
+21) import inside de _app.tsx the library react-toastify (tosti conteiner and the .css)
+
