@@ -1,3 +1,5 @@
+#install yarn:
+$npm install --global yarn
 
 #install typescritp in developer invoiment
 $yarn add typescript -D 
@@ -11,16 +13,42 @@ $yarn add @types/express -D
 #initial typescript 
 $yarn tsc --init
 
-#create file server.ts to open server node express
+#create file server.ts to open server node express:
 
 #create the script for run typescript project, add librari ts-node-dev
 $yarn add ts-node-dev -D
 
 #after create the script in package.ts
+    "scripts": {
+        "dev": "ts-node-dev --exit-child src/server.ts"
+    },
 
+#librari of erros tratactives
+$yarn add express-async-errors
+
+=============== CORS ===============
+#enable the cors for any IP to be able to make the request
+$yarn add cors
+
+#after install the cors, must be config types
+$yarn add @types/cors -D
+
+=============== MULTER ===============
 #work whit images in node:
 $yarn add multer
 
 #types access of multer in typescript
 $yarn add @types/multer -D 
+
+
+=============== PRISMA ===============
+#install prisma
+$yarn add prisma
+
+#install prisma Client - help generade migrations DB
+$yarn add @prisma/client
+
+        #start configuratino Prisma:
+        #THIS OPTION JUST ON FIRT TIME ADD PRISMA ON PROJECT, IF PROJECT IS ALREDY EXISTE DON'T USE THIS CODE:
+        $npx prisma init
 
