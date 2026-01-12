@@ -1,0 +1,32 @@
+#version: "3.9"
+
+services:
+  api:
+    container_name: pizza-api
+    build: .
+    ports:
+      - "3333:3333"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    env_file:
+      - .env
+    depends_on:
+      - db
+    command: sh -c "npx prisma migrate deploy && yarn dev"
+
+  db:
+    container_name: pizza-db
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_DB: pizza_db
+      POSTGRES_USER: pizza
+      POSTGRES_PASSWORD: pizza
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
